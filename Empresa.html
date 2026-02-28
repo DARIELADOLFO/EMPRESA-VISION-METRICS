@@ -149,7 +149,7 @@
   <header>
     <div class="container nav-content">
       <div class="logo">
-        <img src="VIS_,METRICS_LOGO.png" alt="Logo Vision Metrics" style="height: 160px; border-radius: 4px; margin-right: 5px;">
+        <img src="VIS_,METRICS_LOGO.png" alt="Logo Vision Metrics" style="height: 180px; border-radius: 4px; margin-right: 5px;">
         Vision Metrics
       </div>
       <nav class="nav-links">
@@ -161,19 +161,21 @@
       </nav>
     </div>
   </header>
-
-  <section class="hero">
+<section class="hero">
     <div class="container hero-content reveal">
-      <div class="badge">Consultoría Data-Driven B2B</div>
+      <div class="badge">VisionMetrics</div>
       <h1>Transformamos tus Datos en <span>Decisiones Rentables</span></h1>
       <p>Diseñamos ecosistemas de datos, automatizamos reportes corporativos y desarrollamos inteligencia de negocios para empresas que buscan reducir costos operativos y escalar con certidumbre.</p>
       <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
         <button class="btn-primary" onclick="document.getElementById('contacto').scrollIntoView()">
           Solicitar Evaluación de Datos <i class="fas fa-arrow-right"></i>
         </button>
-        <button class="btn-primary" style="background: transparent; border: 1px solid var(--border-color);" onclick="window.open('URL_DE_TU_LEAD_MAGNET', '_blank')">
-          <i class="fas fa-download"></i> Descargar Guía BI
+        
+        <!-- 👇 Botón actualizado con tu link directo a Google Drive 👇 -->
+        <button class="btn-primary" style="background: transparent; border: 1px solid var(--border-color);" onclick="window.open('https://drive.google.com/file/d/1SmZIGLXcwjzdTMdCC6gh5d-la22Oi3vN/view?usp=sharing', '_blank')">
+          <i class="fas fa-download"></i> Descargar Brochure
         </button>
+        
       </div>
     </div>
   </section>
@@ -226,43 +228,140 @@
     </div>
   </section>
 
-  <section id="soluciones">
+<style>
+    /* Contenedor principal que oculta lo que se sale de la pantalla */
+    .carousel-wrapper {
+      width: 100%;
+      overflow: hidden;
+      padding: 20px 0;
+      position: relative;
+    }
+    
+    /* El "riel" que contiene todas las tarjetas y se mueve */
+    .carousel-track {
+      display: flex;
+      gap: 30px;
+      width: max-content; /* Crece según el contenido */
+      animation: scrollLeft 35s linear infinite; /* 35s es la velocidad. Cámbialo si lo quieres más rápido o lento */
+    }
+    
+    /* ¡Toque UX! Si el usuario pone el mouse encima, se detiene para que pueda leer */
+    .carousel-track:hover {
+      animation-play-state: paused;
+    }
+
+    /* Las tarjetas. Usamos flex: 0 0 320px para que no se aplasten en el celular */
+    .services-carousel-card {
+      flex: 0 0 320px; 
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .services-carousel-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    /* La animación que lo mueve a la izquierda */
+    @keyframes scrollLeft {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); } 
+      /* Se mueve hasta la mitad exacta (donde empiezan las tarjetas duplicadas) y se reinicia sin que el ojo lo note */
+    }
+
+    /* Responsivo: en celulares hacemos las tarjetas un poco más estrechas */
+    @media (max-width: 768px) {
+      .services-carousel-card {
+        flex: 0 0 280px; 
+      }
+    }
+  </style>
+
+  <section id="soluciones" style="background: var(--bg-dark); padding: 60px 0;">
     <div class="container reveal">
-      <div class="section-header">
+      <div class="section-header" style="text-align: center; margin-bottom: 40px;">
         <h2>Arquitectura de Decisiones</h2>
         <p>No somos solo desarrolladores; somos consultores de negocios técnicos. Integramos tus fuentes de datos para resolver cuellos de botella reales.</p>
       </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-chart-bar"></i></div>
-          <h3>Dashboards Ejecutivos (Power BI)</h3>
-          <p>Paneles interactivos diseñados para la alta gerencia. Visualiza la salud de tu empresa en tiempo real sin depender de reportes en Excel de fin de mes.</p>
-        </div>
-        
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-comments"></i></div>
-          <h3>Análisis de Comentarios e Inteligencia de datos</h3>
-          <p>Transforma opiniones en decisiones. Analizamos comentarios de clientes, notas operativas o incidencias usando modelos de clasificación de machine learning para identificar tendencias, problemas recurrentes y oportunidades de mejoras ocultas en tu operación.</p>
-        </div>
-        
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-network-wired"></i></div>
-          <h3>Integración de Datos Empresariales</h3>
-          <p>Conectamos tus fuentes de datos existentes (ERP, bases de datos, archivos y sistemas internos) para centralizar la información y construir una visión única del negocio.</p>
-        </div>
-        
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
-          <h3>Modelos Predictivos y Análisis de proyeccion</h3>
-          <p>No solo veas el pasado, anticipa el futuro. Implementamos modelos de análisis predictivo que estiman demanda, detectan patrones de fallas y optimizan decisiones estratégicas basadas en datos.</p>
-        </div>
-        
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
-          <h3>Consultoría BI Estratégica</h3>
-          <p>Diagnóstico de madurez de datos y modelado predictivo. Te decimos qué medir, por qué medirlo y cómo optimizar la logística y ventas con ello.</p>
+      
+      <div class="carousel-wrapper">
+        <div class="carousel-track">
+          
+          <div class="services-carousel-card">
+            <div class="service-icon"><i class="fas fa-chart-bar"></i></div>
+            <h3>Dashboards Ejecutivos (Power BI)</h3>
+            <p>Paneles interactivos diseñados para la alta gerencia. Visualiza la salud de tu empresa en tiempo real sin depender de reportes en Excel de fin de mes.</p>
+          </div>
+          
+          <div class="services-carousel-card">
+            <div class="service-icon"><i class="fas fa-comments"></i></div>
+            <h3>Análisis de Comentarios e Inteligencia de datos</h3>
+            <p>Transforma opiniones en decisiones. Analizamos comentarios usando modelos de machine learning para identificar tendencias y oportunidades de mejoras en tu operación.</p>
+          </div>
+          
+          <div class="services-carousel-card">
+            <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+            <h3>Integración de Datos Empresariales</h3>
+            <p>Conectamos tus fuentes de datos existentes (ERP, bases de datos, archivos y sistemas internos) para centralizar la información y construir una visión única del negocio.</p>
+          </div>
+          
+          <div class="services-carousel-card">
+            <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
+            <h3>Modelos Predictivos y Análisis de proyeccion</h3>
+            <p>No solo veas el pasado, anticipa el futuro. Implementamos modelos de análisis predictivo que estiman demanda, detectan patrones de fallas y optimizan decisiones.</p>
+          </div>
+          
+          <div class="services-carousel-card">
+            <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+            <h3>Consultoría BI Estratégica</h3>
+            <p>Diagnóstico de madurez de datos y modelado predictivo. Te decimos qué medir, por qué medirlo y cómo optimizar la logística y ventas con ello.</p>
+          </div>
+
+          <div class="services-carousel-card">
+            <div class="service-icon"><i class="fas fa-chart-bar"></i></div>
+            <h3>Dashboards Ejecutivos (Power BI)</h3>
+            <p>Paneles interactivos diseñados para la alta gerencia. Visualiza la salud de tu empresa en tiempo real sin depender de reportes en Excel de fin de mes.</p>
+          </div>
+          
+          <div class="services-carousel-card">
+            <div class="service-icon"><i class="fas fa-comments"></i></div>
+            <h3>Análisis de Comentarios e Inteligencia de datos</h3>
+            <p>Transforma opiniones en decisiones. Analizamos comentarios usando modelos de machine learning para identificar tendencias y oportunidades de mejoras en tu operación.</p>
+          </div>
+          
+          <div class="services-carousel-card">
+            <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+            <h3>Integración de Datos Empresariales</h3>
+            <p>Conectamos tus fuentes de datos existentes (ERP, bases de datos, archivos y sistemas internos) para centralizar la información y construir una visión única del negocio.</p>
+          </div>
+          
+          <div class="services-carousel-card">
+            <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
+            <h3>Modelos Predictivos y Análisis de proyeccion</h3>
+            <p>No solo veas el pasado, anticipa el futuro. Implementamos modelos de análisis predictivo que estiman demanda, detectan patrones de fallas y optimizan decisiones.</p>
+          </div>
+          
+          <div class="services-carousel-card">
+            <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+            <h3>Consultoría BI Estratégica</h3>
+            <p>Diagnóstico de madurez de datos y modelado predictivo. Te decimos qué medir, por qué medirlo y cómo optimizar la logística y ventas con ello.</p>
+          </div>
+
         </div>
       </div>
+      
     </div>
   </section>
 
@@ -273,83 +372,219 @@
         <p>Extraemos inteligencia directamente de tus plataformas operativas para unificar tu verdad corporativa.</p>
       </div>
       
-      <div class="tech-marquee-wrapper">
+<div class="tech-marquee-wrapper">
         <div class="tech-marquee">
-          <div class="tech-item"><i class="fas fa-chart-line" style="color: #F2C811;"></i><span>Power BI</span></div>
-          <div class="tech-item"><i class="fas fa-database" style="color: #CC292B;"></i><span>SQL Server</span></div>
-          <div class="tech-item"><i class="fab fa-python" style="color: #3776AB;"></i><span>Python</span></div>
-          <div class="tech-item"><i class="fas fa-server" style="color: #00A9E0;"></i><span>SAP</span></div>
-          <div class="tech-item"><i class="fas fa-cubes" style="color: #714B67;"></i><span>Odoo</span></div>
-          <div class="tech-item"><i class="fas fa-server" style="color: #F80000;"></i><span>Oracle</span></div>
           
           <div class="tech-item"><i class="fas fa-chart-line" style="color: #F2C811;"></i><span>Power BI</span></div>
           <div class="tech-item"><i class="fas fa-database" style="color: #CC292B;"></i><span>SQL Server</span></div>
           <div class="tech-item"><i class="fab fa-python" style="color: #3776AB;"></i><span>Python</span></div>
-          <div class="tech-item"><i class="fas fa-server" style="color: #00A9E0;"></i><span>SAP</span></div>
+          <div class="tech-item"><i class="fa-solid fa-cloud" style="color: #00A9E0;"></i><span>SAP</span></div>
           <div class="tech-item"><i class="fas fa-cubes" style="color: #714B67;"></i><span>Odoo</span></div>
           <div class="tech-item"><i class="fas fa-server" style="color: #F80000;"></i><span>Oracle</span></div>
+          <div class="tech-item"><i class="fas fa-file-excel" style="color: #107C41;"></i><span>Excel</span></div>
+          <div class="tech-item"><i class="fas fa-laptop-code" style="color: #FF4B4B;"></i><span>Streamlit</span></div>
+          <div class="tech-item"><i class="fas fa-table" style="color: #150458;"></i><span>Pandas</span></div>
+          
+          <div class="tech-item"><i class="fas fa-chart-line" style="color: #F2C811;"></i><span>Power BI</span></div>
+          <div class="tech-item"><i class="fas fa-database" style="color: #CC292B;"></i><span>SQL Server</span></div>
+          <div class="tech-item"><i class="fab fa-python" style="color: #3776AB;"></i><span>Python</span></div>
+          <div class="tech-item"><i class="fa-solid fa-cloud" style="color: #00A9E0;"></i><span>SAP</span></div>
+          <div class="tech-item"><i class="fas fa-cubes" style="color: #714B67;"></i><span>Odoo</span></div>
+          <div class="tech-item"><i class="fas fa-server" style="color: #F80000;"></i><span>Oracle</span></div>
+          <div class="tech-item"><i class="fas fa-file-excel" style="color: #107C41;"></i><span>Excel</span></div>
+          <div class="tech-item"><i class="fas fa-laptop-code" style="color: #FF4B4B;"></i><span>Streamlit</span></div>
+          <div class="tech-item"><i class="fas fa-table" style="color: #150458;"></i><span>Pandas</span></div>
+
+        </div>
+      </div>
         </div>
       </div>
     </div>
   </section>
+<style>
+    .process-grid-responsive {
+      display: grid;
+      gap: 20px;
+      align-items: start;
+      /* Por defecto (celulares): 1 columna */
+      grid-template-columns: 1fr; 
+    }
+    
+    /* Para pantallas medianas (Tablets y celulares acostados): 2 columnas */
+    @media (min-width: 600px) {
+      .process-grid-responsive {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    /* Para pantallas grandes (Laptops y monitores): 5 columnas continuas */
+    @media (min-width: 1024px) {
+      .process-grid-responsive {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+  </style>
 
-  <section id="proceso">
+<section id="proceso">
     <div class="container reveal">
-      <div class="section-header">
+      <div class="section-header" style="text-align: center; margin-bottom: 40px;">
         <h2>Metodología de Implementación</h2>
-        <p>Un framework probado para garantizar que la tecnología se adapte a tu logística corporativa, no al revés.</p>
+          <p>Un enfoque práctico y orientado a resultados para convertir datos en decisiones sin complicar tu operación.</p>
       </div>
-      <div class="process-grid">
+      
+      <div class="process-grid-responsive">
+        
         <div class="process-step">
           <div class="step-number">1</div>
-          <h4>Diagnóstico Core</h4>
-          <p>Auditoría de tu estructura de datos actual y levantamiento de requerimientos de negocio.</p>
+          <h4>Diagnóstico de Negocio y Datos</h4>
+          <p>Analizamos tus procesos, fuentes de información y necesidades clave para identificar oportunidades de mejora y definir los KPIs que realmente impactan tu operación.</p>
         </div>
+        
         <div class="process-step">
           <div class="step-number">2</div>
-          <h4>Modelado y Desarrollo</h4>
-          <p>Construcción del Data Warehouse, limpieza (ETL) y diseño UX/UI de los tableros en Power BI.</p>
+          <h4>Preparación y Modelado de Datos</h4>
+          <p>Organizamos, limpiamos y estructuramos tus datos desde sus fuentes (Excel, bases de datos, sistemas internos) para asegurar información confiable y lista para análisis.</p>
         </div>
+        
         <div class="process-step">
           <div class="step-number">3</div>
-          <h4>Despliegue y Pruebas</h4>
-          <p>Integración en tu entorno, validación de cifras con stakeholders y puesta en producción.</p>
+          <h4>Desarrollo de Dashboards y KPIs</h4>
+          <p>Diseñamos tableros interactivos en Power BI enfocados en la toma de decisiones, con indicadores claros, visuales intuitivos y navegación ejecutiva.</p>
         </div>
+        
         <div class="process-step">
           <div class="step-number">4</div>
-          <h4>Mejora Continua</h4>
-          <p>Soporte proactivo, capacitación del equipo y escalamiento a nuevas áreas de la empresa.</p>
+          <h4>Implementación y Validación</h4>
+          <p>Integramos la solución en tu entorno, validamos la información con los responsables del negocio y aseguramos que los datos reflejen la realidad operativa.</p>
         </div>
+        
+        <div class="process-step">
+          <div class="step-number">5</div>
+          <h4>Mejora y Escalabilidad Continua</h4>
+          <p>Soporte proactivo, capacitación del equipo y escalamiento a nuevas áreas de la empresa, incorporando nuevas métricas, automatizaciones y mejoras continuas en los reportes.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+    </div>
+  </section>
+      </div>
+    </div>
+  </section>
       </div>
     </div>
   </section>
 
-  <section id="casos" style="background: var(--bg-card);">
+ <style>
+    .modal { display: none; position: fixed; z-index: 9999; padding-top: 60px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.9); backdrop-filter: blur(8px); }
+    .modal-content { margin: auto; display: block; max-width: 90%; max-height: 85vh; object-fit: contain; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); animation: zoomIn 0.3s ease; }
+    .close-modal { position: absolute; top: 20px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; transition: 0.3s; cursor: pointer; }
+    .close-modal:hover, .close-modal:focus { color: var(--primary); text-decoration: none; cursor: pointer; }
+    @keyframes zoomIn { from {transform:scale(0.9); opacity:0;} to {transform:scale(1); opacity:1;} }
+  </style>
+
+  <section id="casos" style="background: var(--bg-card); padding: 60px 0;">
     <div class="container reveal">
-      <div class="section-header">
+      <div class="section-header" style="text-align: center; margin-bottom: 40px;">
         <h2>Inteligencia Aplicada a la Industria</h2>
         <p>No mostramos gráficos bonitos; mostramos soluciones que han resuelto problemas operativos complejos.</p>
       </div>
-      <div class="portfolio-grid">
-        <div class="portfolio-item">
-          <div class="portfolio-img"><i class="fas fa-truck"></i></div>
-          <div class="portfolio-content">
-            <div class="portfolio-tags"><span>Logística</span><span>SQL</span></div>
-            <h3>Optimización de Cadena de Suministro</h3>
-            <p>Dashboard integral que permitió a una empresa de distribución reducir sus quiebres de stock en un 40% mediante alertas tempranas y análisis de rotación.</p>
+      
+      <div class="portfolio-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+        
+        <div class="portfolio-item" style="background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border-color); display: flex; flex-direction: column; overflow: hidden;">
+          <div class="portfolio-img" style="padding: 0; height: 220px; background: var(--bg-dark); overflow: hidden; cursor: zoom-in;" onclick="abrirImagen('Logistica.jpeg')">
+            <img src="Logistica.jpeg" alt="Dashboard de Gestión Logística y Flotas" style="width: 100%; height: 100%; object-fit: contain; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          </div>
+          <div class="portfolio-content" style="padding: 32px; flex-grow: 1; display: flex; flex-direction: column;">
+            <div class="portfolio-tags" style="margin-bottom: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
+                <span style="background: var(--bg-dark); padding: 5px 10px; border-radius: 5px; font-size: 0.8rem;">Logística</span>
+                <span style="background: var(--bg-dark); padding: 5px 10px; border-radius: 5px; font-size: 0.8rem;">Power BI</span>
+                <span style="background: var(--bg-dark); padding: 5px 10px; border-radius: 5px; font-size: 0.8rem;">Control de Costos</span>
+            </div>
+            <h3 style="margin-bottom: 15px;">Gestión de Flotas y Rentabilidad Operativa</h3>
+            <p style="margin-bottom: 20px;">Solución analítica diseñada para optimizar rutas de distribución y auditar el desempeño del transporte. Integra indicadores clave como rentabilidad por viaje, consumo de combustible y mapeo de entregas, facilitando el control de costos y la eficiencia logística integral.</p>
+            <a href="TU_ENLACE_AQUI" target="_blank" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; margin-top: auto; display: inline-block;">
+              Ver interactivo <i class="fas fa-external-link-alt" style="margin-left: 5px; font-size: 0.8rem;"></i>
+            </a>
           </div>
         </div>
-        <div class="portfolio-item">
-          <div class="portfolio-img"><i class="fas fa-shopping-cart"></i></div>
-          <div class="portfolio-content">
-            <div class="portfolio-tags"><span>Retail</span><span>Power BI</span></div>
-            <h3>Control Omnicanal de Ventas</h3>
-            <p>Integración del ERP corporativo con el CRM de ventas, logrando una vista 360 del ciclo de vida del cliente y un aumento del 15% en ticket promedio.</p>
+
+        <div class="portfolio-item" style="background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border-color); display: flex; flex-direction: column; overflow: hidden;">
+          <div class="portfolio-img" style="padding: 0; height: 220px; background: var(--bg-dark); overflow: hidden; cursor: zoom-in;" onclick="abrirImagen('NPS.jpeg')">
+            <img src="NPS.jpeg" alt="Dashboard de Análisis de Sentimientos" style="width: 100%; height: 100%; object-fit: contain; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          </div>
+          <div class="portfolio-content" style="padding: 32px; flex-grow: 1; display: flex; flex-direction: column;">
+            <div class="portfolio-tags" style="margin-bottom: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
+                <span style="background: var(--bg-dark); padding: 5px 10px; border-radius: 5px; font-size: 0.8rem;">NPS</span>
+                <span style="background: var(--bg-dark); padding: 5px 10px; border-radius: 5px; font-size: 0.8rem;">Power BI</span>
+                <span style="background: var(--bg-dark); padding: 5px 10px; border-radius: 5px; font-size: 0.8rem;">Experiencia del Cliente</span>
+            </div>
+            <h3 style="margin-bottom: 15px;">Control y análisis de sentimientos de clientes</h3>
+            <p style="margin-bottom: 20px;">Herramienta estratégica para medir la lealtad del usuario (NPS) e identificar rápidamente oportunidades de retención. Facilita la toma de decisiones gerenciales con una visión clara del servicio, apoyada en una interfaz 100% a la medida creada con SVG y HTML integrado en DAX.</p>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiMzBiMDZjOGItMzYyYS00NTU4LWEwZmEtNzdjYWE3ZWJkMTEyIiwidCI6IjMwOTE4NjllLTFiNWMtNDlhNy1iZWQwLTA1ODJiMjBlYzg0NSIsImMiOjJ9" target="_blank" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; margin-top: auto; display: inline-block;">
+              Ver interactivo <i class="fas fa-external-link-alt" style="margin-left: 5px; font-size: 0.8rem;"></i>
+            </a>
           </div>
         </div>
+
+        <div class="portfolio-item" style="background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border-color); display: flex; flex-direction: column; overflow: hidden;">
+          <div class="portfolio-img" style="padding: 0; height: 220px; background: var(--bg-dark); overflow: hidden; cursor: zoom-in;" onclick="abrirImagen('NPS_ML_.jpeg')">
+            <img src="NPS_ML_.jpeg" alt="Dashboard Financiero con Machine Learning" style="width: 100%; height: 100%; object-fit: contain; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          </div>
+          <div class="portfolio-content" style="padding: 32px; flex-grow: 1; display: flex; flex-direction: column;">
+            <div class="portfolio-tags" style="margin-bottom: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
+                <span style="background: var(--bg-dark); padding: 5px 10px; border-radius: 5px; font-size: 0.8rem;">NPS & Sentimientos</span>
+                <span style="background: var(--bg-dark); padding: 5px 10px; border-radius: 5px; font-size: 0.8rem;">Python + IA</span>
+            </div>
+            <h3 style="margin-bottom: 15px;">Inteligencia de Voz del Cliente</h3>
+            <p style="margin-bottom: 20px;">Implementación de un modelo de Procesamiento de Lenguaje Natural (NLP) que lee y clasifica automáticamente miles de comentarios en quejas, consultas o elogios, cruzando esta data con el nivel de satisfacción (CSAT) en tiempo real.</p>
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiODkwMzk4M2QtNTI1ZC00ZDJhLWE2YjItYzBkODhjNDI4NmJlIiwidCI6IjMwOTE4NjllLTFiNWMtNDlhNy1iZWQwLTA1ODJiMjBlYzg0NSIsImMiOjJ9" target="_blank" style="color: var(--primary); font-weight: 600; font-size: 0.9rem; margin-top: auto; display: inline-block;">
+              Ver interactivo <i class="fas fa-external-link-alt" style="margin-left: 5px; font-size: 0.8rem;"></i>
+            </a>
+          </div>
+        </div>
+
       </div>
+      
     </div>
   </section>
+
+  <div id="visorImagen" class="modal" onclick="cerrarImagen()">
+    <span class="close-modal" onclick="cerrarImagen()">&times;</span>
+    <img class="modal-content" id="imgAmpliacion">
+  </div>
+
+  <script>
+    function abrirImagen(rutaImagen) {
+      var modal = document.getElementById("visorImagen");
+      var imgModal = document.getElementById("imgAmpliacion");
+      modal.style.display = "block";
+      imgModal.src = rutaImagen;
+    }
+    
+    function cerrarImagen() {
+      document.getElementById("visorImagen").style.display = "none";
+    }
+  </script>
+
+<style>
+    .pricing-grid-3cols {
+      display: grid;
+      gap: 30px;
+      align-items: stretch;
+      /* Por defecto en celulares se pone una debajo de la otra */
+      grid-template-columns: 1fr; 
+    }
+    
+    /* En PC y Laptops, forzamos que sean 3 columnas en la misma línea */
+    @media (min-width: 992px) {
+      .pricing-grid-3cols {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
 
   <section id="inversion">
     <div class="container reveal">
@@ -357,7 +592,9 @@
         <h2>Modelos de Inversión Corporativa</h2>
         <p>Transparencia desde el día uno. Las cotizaciones finales dependen de la complejidad de la arquitectura de datos y la cantidad de fuentes a integrar.</p>
       </div>
-      <div class="pricing-grid">
+      
+      <div class="pricing-grid-3cols">
+        
         <div class="price-card">
           <div class="price-header">
             <h3>Fase 1: Implementación BI</h3>
@@ -372,6 +609,7 @@
           </ul>
           <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 24px;">*El valor puede superar los RD$130,000+ según la magnitud corporativa.</p>
         </div>
+
         <div class="price-card featured">
           <div class="price-header">
             <h3>Fase 2: Retainer Estratégico</h3>
@@ -386,6 +624,24 @@
           </ul>
           <button class="btn-primary" style="width: 100%; margin-top: 24px;" onclick="document.getElementById('contacto').scrollIntoView()">Agendar Diagnóstico</button>
         </div>
+
+        <div class="price-card">
+          <div class="price-header">
+            <h3>Fase 3: IA, Predicción y Clasificación</h3>
+            <p style="color: var(--text-muted);">Machine Learning y automatizaciones con Python.</p>
+          </div>
+          <div class="price-amount">Desde RD$ 85,000 <span>/proyecto</span></div>
+          <ul class="price-features">
+            <li><i class="fas fa-check-circle"></i> Algoritmos de predicción (ventas, fallas, demanda)</li>
+            <li><i class="fas fa-check-circle"></i> Modelos de clasificación de textos automática (NLP)</li>
+            <li><i class="fas fa-check-circle"></i> Desarrollo de Web Apps analíticas interactivas (Streamlit)</li>
+            <li><i class="fas fa-check-circle"></i> Creación de herramientas automáticas a medida (ej. Calculadora de rentabilidad por viaje)</li>
+          </ul>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 24px;">*Requiere auditoría previa de la calidad de datos. El valor puede superar los RD$120,000 segun magnitud y alcance del modelo.</p>
+          
+          <button class="btn-primary" style="width: 100%; margin-top: 15px; background: transparent; border: 1px solid var(--primary); color: var(--primary);" onclick="document.getElementById('contacto').scrollIntoView()">Cotizar Proyecto</button>
+        </div>
+
       </div>
     </div>
   </section>
@@ -475,7 +731,7 @@
   <footer>
     <div class="container">
       <div class="logo" style="justify-content: center; margin-bottom: 10px;">
-        <img src="VIS_,METRICS_LOGO.png" alt="Logo Vision Metrics" style="height: 160px; border-radius: 4px; margin-right: 5px;">
+        <img src="VIS_,METRICS_LOGO.png" alt="Logo Vision Metrics" style="height: 180px; border-radius: 4px; margin-right: 5px;">
         Vision Metrics
       </div>
       
