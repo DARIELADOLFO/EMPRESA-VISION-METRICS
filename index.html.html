@@ -544,65 +544,138 @@
     }
   </style>
 
-  <section id="inversion">
-    <div class="container reveal">
-      <div class="section-header">
-        <h2>Modelos de Inversión Corporativa</h2>
-        <p>Transparencia desde el día uno. Las cotizaciones finales dependen de la complejidad de la arquitectura de datos y la cantidad de fuentes a integrar.</p>
-      </div>
-      
-      <div class="pricing-grid-3cols">
-        
-        <div class="price-card">
-          <div class="price-header">
-            <h3>Fase 1: Implementación BI</h3>
-            <p style="color: var(--text-muted);">Arquitectura y desarrollo inicial.</p>
-          </div>
-          <div class="price-amount">Desde RD$ 50,000 <span>/proyecto</span></div>
-          <ul class="price-features">
-            <li><i class="fas fa-check-circle"></i> Extracción y modelado de datos</li>
-            <li><i class="fas fa-check-circle"></i> Diseño de Dashboards Ejecutivos</li>
-            <li><i class="fas fa-check-circle"></i> Conexion con tus bases de datos o ERP (SAP, SQL server, Odoo, etc.)</li>
-            <li><i class="fas fa-check-circle"></i> Analisís y identificación de KPIs e indicadores de rendimiento inicial de reportes</li>
-          </ul>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 24px;">*El valor puede superar los RD$130,000+ según la magnitud corporativa.</p>
-        </div>
-
-        <div class="price-card featured">
-          <div class="price-header">
-            <h3>Fase 2: Retainer Estratégico</h3>
-            <p style="color: var(--text-muted);">Soporte, evolución y administración.</p>
-          </div>
-          <div class="price-amount">RD$ 12,000 - 20,000 <span>/mes</span></div>
-          <ul class="price-features">
-            <li><i class="fas fa-check-circle"></i> Mantenimiento y soporte de cualquier eventualidad</li>
-            <li><i class="fas fa-check-circle"></i> Optimización de rendimiento </li>
-            <li><i class="fas fa-check-circle"></i> Desarrollo de nuevos requerimientos</li>
-            <li><i class="fas fa-check-circle"></i> Consultoría y actualizaciones proactivas</li>
-          </ul>
-          <button class="btn-primary" style="width: 100%; margin-top: 24px;" onclick="document.getElementById('contacto').scrollIntoView()">Agendar Diagnóstico</button>
-        </div>
-
-        <div class="price-card">
-          <div class="price-header">
-            <h3>Fase 3: IA, Predicción y Clasificación</h3>
-            <p style="color: var(--text-muted);">Machine Learning y automatizaciones con Python.</p>
-          </div>
-          <div class="price-amount">Desde RD$ 85,000 <span>/proyecto</span></div>
-          <ul class="price-features">
-            <li><i class="fas fa-check-circle"></i> Algoritmos de predicción (ventas, fallas, demanda)</li>
-            <li><i class="fas fa-check-circle"></i> Modelos de clasificación de textos automática (NLP)</li>
-            <li><i class="fas fa-check-circle"></i> Desarrollo de Web Apps analíticas interactivas (Streamlit)</li>
-            <li><i class="fas fa-check-circle"></i> Creación de herramientas automáticas a medida (ej. Calculadora de rentabilidad por viaje)</li>
-          </ul>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 24px;">*Requiere auditoría previa de la calidad de datos. El valor puede superar los RD$120,000 segun magnitud y alcance del modelo.</p>
-          
-          <button class="btn-primary" style="width: 100%; margin-top: 15px; background: transparent; border: 1px solid var(--primary); color: var(--primary);" onclick="document.getElementById('contacto').scrollIntoView()">Cotizar Proyecto</button>
-        </div>
-
-      </div>
+ <section id="inversion">
+  <div class="container reveal">
+    <div class="section-header">
+      <h2>Modelos de Inversión Corporativa</h2>
+      <p>Transparencia desde el día uno. Las cotizaciones finales dependen de la complejidad de la arquitectura de datos y la cantidad de fuentes a integrar.</p>
     </div>
-  </section>
+
+    <div class="pricing-grid-3cols">
+
+      <!-- FASE 1 -->
+      <div class="price-card" style="display: flex; flex-direction: column;">
+        <div style="background: rgba(0,102,255,0.08); border-radius: 8px; padding: 20px; margin-bottom: 24px; text-align: center;">
+          <div style="width: 48px; height: 48px; background: rgba(0,102,255,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;">
+            <i class="fas fa-chart-bar" style="color: var(--primary); font-size: 1.3rem;"></i>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">Fase 1</p>
+          <h3 style="font-size: 1.2rem; margin-bottom: 4px;">Implementación BI</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">Arquitectura y desarrollo inicial</p>
+        </div>
+        <div style="text-align: center; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border-color);">
+          <div style="font-size: 1.8rem; font-weight: 800; color: var(--text-main);">Desde RD$ 50,000</div>
+          <div style="color: var(--text-muted); font-size: 0.9rem;">/proyecto</div>
+        </div>
+        <ul style="display: flex; flex-direction: column; gap: 12px; flex-grow: 1;">
+          <li style="display: flex; gap: 10px; font-size: 0.9rem; color: var(--text-muted);">
+            <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0;"></i>
+            Extracción y modelado de datos
+          </li>
+          <li style="display: flex; gap: 10px; font-size: 0.9rem; color: var(--text-muted);">
+            <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0;"></i>
+            Diseño de Dashboards Ejecutivos en Power BI
+          </li>
+          <li style="display: flex; gap: 10px; font-size: 0.9rem; color: var(--text-muted);">
+            <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0;"></i>
+            Conexión con ERP (SAP, SQL Server, Odoo, etc.)
+          </li>
+          <li style="display: flex; gap: 10px; font-size: 0.9rem; color: var(--text-muted);">
+            <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0;"></i>
+            Identificación de KPIs e indicadores clave
+          </li>
+        </ul>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-color);">
+          <i class="fas fa-info-circle" style="margin-right: 6px;"></i>Puede superar RD$130,000+ según magnitud corporativa.
+        </p>
+        <button class="btn-primary" style="width: 100%; margin-top: 20px; justify-content: center;" onclick="document.getElementById('contacto').scrollIntoView()">
+          Cotizar Fase 1
+        </button>
+      </div>
+
+      <!-- FASE 2 — DESTACADA -->
+      <div class="price-card featured" style="display: flex; flex-direction: column; position: relative; transform: translateY(-8px);">
+        <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--primary); color: #fff; font-size: 0.75rem; font-weight: 700; padding: 5px 18px; border-radius: 20px; white-space: nowrap; letter-spacing: 0.5px;">
+          MÁS POPULAR
+        </div>
+        <div style="background: rgba(0,102,255,0.08); border-radius: 8px; padding: 20px; margin-bottom: 24px; text-align: center;">
+          <div style="width: 48px; height: 48px; background: rgba(0,102,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;">
+            <i class="fas fa-sync-alt" style="color: var(--primary); font-size: 1.3rem;"></i>
+          </div>
+          <p style="color: var(--primary); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">Fase 2</p>
+          <h3 style="font-size: 1.2rem; margin-bottom: 4px;">Retainer Estratégico</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">Soporte, evolución y administración</p>
+        </div>
+        <div style="text-align: center; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border-color);">
+          <div style="font-size: 1.8rem; font-weight: 800; color: var(--text-main);">RD$ 12,000 – 20,000</div>
+          <div style="color: var(--text-muted); font-size: 0.9rem;">/mes</div>
+        </div>
+        <ul style="display: flex; flex-direction: column; gap: 12px; flex-grow: 1;">
+          <li style="display: flex; gap: 10px; font-size: 0.9rem; color: var(--text-muted);">
+            <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0;"></i>
+            Mantenimiento y soporte ante cualquier eventualidad
+          </li>
+          <li style="display: flex; gap: 10px; font-size: 0.9rem; color: var(--text-muted);">
+            <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0;"></i>
+            Optimización de rendimiento continua
+          </li>
+          <li style="display: flex; gap: 10px; font-size: 0.9rem; color: var(--text-muted);">
+            <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0;"></i>
+            Desarrollo de nuevos requerimientos
+          </li>
+          <li style="display: flex; gap: 10px; font-size: 0.9rem; color: var(--text-muted);">
+            <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0;"></i>
+            Consultoría y actualizaciones proactivas
+          </li>
+        </ul>
+        <button class="btn-primary" style="width: 100%; margin-top: 28px; justify-content: center;" onclick="document.getElementById('contacto').scrollIntoView()">
+          Agendar Diagnóstico <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- FASE 3 -->
+      <div class="price-card" style="display: flex; flex-direction: column;">
+        <div style="background: rgba(0,208,132,0.06); border-radius: 8px; padding: 20px; margin-bottom: 24px; text-align: center;">
+          <div style="width: 48px; height: 48px; background: rgba(0,208,132,0.12); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;">
+            <i class="fas fa-brain" style="color: var(--accent); font-size: 1.3rem;"></i>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">Fase 3</p>
+          <h3 style="font-size: 1.2rem; margin-bottom: 4px;">IA, Predicción y Clasificación</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">Machine Learning y automatizaciones con Python</p>
+        </div>
+        <div style="text-align: center; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border-color);">
+          <div style="font-size: 1.8rem; font-weight: 800; color: var(--text-main);">Desde RD$ 85,000</div>
+          <div style="color: var(--text-muted); font-size: 0.9rem;">/proyecto</div>
+        </div>
+        <ul style="display: flex; flex-direction: column; gap: 12px; flex-grow: 1;">
+          <li style="display: flex; gap: 10px; font-size: 0.9rem; color: var(--text-muted);">
+            <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0;"></i>
+            Algoritmos de predicción (ventas, fallas, demanda)
+          </li>
+          <li style="display: flex; gap: 10px; font-size: 0.9rem; color: var(--text-muted);">
+            <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0;"></i>
+            Modelos NLP para clasificación automática de textos
+          </li>
+          <li style="display: flex; gap: 10px; font-size: 0.9rem; color: var(--text-muted);">
+            <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0;"></i>
+            Web Apps analíticas interactivas con Streamlit
+          </li>
+          <li style="display: flex; gap: 10px; font-size: 0.9rem; color: var(--text-muted);">
+            <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 2px; flex-shrink: 0;"></i>
+            Herramientas automáticas a medida (ej. calculadora de rentabilidad)
+          </li>
+        </ul>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-color);">
+          <i class="fas fa-info-circle" style="margin-right: 6px;"></i>Requiere auditoría previa de datos. Puede superar RD$120,000 según alcance.
+        </p>
+        <button class="btn-primary" style="width: 100%; margin-top: 20px; justify-content: center; background: transparent; border: 1px solid var(--primary); color: var(--primary);" onclick="document.getElementById('contacto').scrollIntoView()">
+          Cotizar Fase 3
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <section style="background: var(--bg-card);">
     <div class="container reveal">
