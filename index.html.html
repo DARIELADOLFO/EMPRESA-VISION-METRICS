@@ -749,20 +749,52 @@
     </div>
   </footer>
 
-  <script>
-    function reveal() {
-      var reveals = document.querySelectorAll(".reveal");
-      for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 100;
-        if (elementTop < windowHeight - elementVisible) {
-          reveals[i].classList.add("active");
-        }
+<script>
+  // ── REVEAL AL SCROLL ──────────────────────────────────
+  function reveal() {
+    document.querySelectorAll(".reveal").forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+        el.classList.add("active");
       }
+    });
+  }
+  window.addEventListener("scroll", reveal);
+  reveal();
+
+  // ── CONTADORES ANIMADOS ───────────────────────────────
+  const counters = [
+    { selector: '#stat-dec1', end: 50,  prefix: '+', suffix: '%' },
+    { selector: '#stat-dec2', end: 25,  prefix: '-', suffix: '%' },
+    { selector: '#stat-dec3', end: 100, prefix: '',  suffix: '%' },
+    { selector: '#stat-log1', end: 25,  prefix: '+', suffix: '%' },
+    { selector: '#stat-log2', end: 15,  prefix: '-', suffix: '%' },
+    { selector: '#stat-log3', end: 30,  prefix: '+', suffix: '%' },
+  ];
+
+  function animateCounter(el, end, prefix, suffix, duration = 1500) {
+    let current = 0;
+    const step = Math.ceil(end / (duration / 16));
+    const timer = setInterval(() => {
+      current = Math.min(current + step, end);
+      el.textContent = prefix + current + suffix;
+      if (current >= end) clearInterval(timer);
+    }, 16);
+  }
+
+  let countersRan = false;
+  function checkCounters() {
+    if (countersRan) return;
+    const first = document.querySelector('#stat-dec1');
+    if (first && first.getBoundingClientRect().top < window.innerHeight - 80) {
+      countersRan = true;
+      counters.forEach((c, i) => {
+        const el = document.querySelector(c.selector);
+        if (el) setTimeout(() => animateCounter(el, c.end, c.prefix, c.suffix), i * 120);
+      });
     }
-    window.addEventListener("scroll", reveal);
-    reveal(); // Trigger on load
-  </script>
+  }
+  window.addEventListener("scroll", checkCounters);
+  checkCounters();
+</script>
 </body>
 </html>
