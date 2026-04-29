@@ -3,7 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vision Metrics | Consultoría Estratégica en Inteligencia de Negocios</title>
+
+  <!-- ── SEO & META TAGS ── -->
+  <title>Vision Metrics | Consultoría BI y Power BI en República Dominicana</title>
+  <meta name="description" content="Transformamos tus datos en decisiones rentables. Diseñamos dashboards en Power BI, automatizamos reportes y desarrollamos modelos predictivos para empresas en República Dominicana y Latinoamérica." />
+  <meta name="keywords" content="consultoría BI República Dominicana, Power BI Santo Domingo, inteligencia de negocios RD, dashboards ejecutivos, análisis de datos empresas, business intelligence Dominican Republic, reportes automatizados, KPIs empresariales, modelos predictivos, data science RD" />
+  <meta name="author" content="Vision Metrics" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://empresa-vision-metrics.vercel.app/" />
+
+  <!-- ── OPEN GRAPH (WhatsApp, LinkedIn, Facebook) ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://empresa-vision-metrics.vercel.app/" />
+  <meta property="og:title" content="Vision Metrics | Consultoría BI y Power BI en República Dominicana" />
+  <meta property="og:description" content="Diseñamos ecosistemas de datos, automatizamos reportes corporativos y desarrollamos inteligencia de negocios para empresas que buscan reducir costos y escalar con certidumbre." />
+  <meta property="og:image" content="https://empresa-vision-metrics.vercel.app/VIS_,METRICS_LOGO.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="es_DO" />
+  <meta property="og:site_name" content="Vision Metrics" />
+
+  <!-- ── TWITTER / X ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vision Metrics | Consultoría BI y Power BI en República Dominicana" />
+  <meta name="twitter:description" content="Diseñamos ecosistemas de datos, automatizamos reportes corporativos y desarrollamos inteligencia de negocios para empresas en RD." />
+  <meta name="twitter:image" content="https://empresa-vision-metrics.vercel.app/VIS_,METRICS_LOGO.png" />
+
+  <!-- ── SCHEMA.org (Google entiende que eres una empresa) ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Vision Metrics",
+    "description": "Consultoría estratégica en inteligencia de negocios, dashboards Power BI y modelos predictivos para empresas en República Dominicana.",
+    "url": "https://empresa-vision-metrics.vercel.app/",
+    "logo": "https://empresa-vision-metrics.vercel.app/VIS_,METRICS_LOGO.png",
+    "email": "estrategia@visionmetrics.com",
+    "telephone": "+18495344300",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santo Domingo",
+      "addressCountry": "DO"
+    },
+    "areaServed": ["Dominican Republic", "Latin America"],
+    "serviceType": ["Business Intelligence", "Power BI", "Data Science", "Machine Learning"],
+    "sameAs": [
+      "https://www.instagram.com/vision_metrics/",
+      "https://www.youtube.com/@VisionMetricsDPV",
+      "https://www.linkedin.com/in/darielpe%C3%B1av%C3%A1squez/"
+    ]
+  }
+  </script>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -92,13 +143,13 @@
     .tech-item { display: flex; flex-direction: column; align-items: center; gap: 10px; font-size: 2.5rem; }
     .tech-item span { font-size: 0.9rem; font-weight: 600; }
 
-    /* NUEVO: ANIMACIÓN PARA EL CARRUSEL DE TECNOLOGÍAS (MARQUEE) */
+    /* MARQUEE */
     .tech-marquee-wrapper { overflow: hidden; white-space: nowrap; width: 100%; position: relative; }
     .tech-marquee { display: flex; gap: 60px; animation: scrollLeft 25s linear infinite; width: max-content; }
     .tech-marquee:hover { animation-play-state: paused; }
     @keyframes scrollLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-    /* MODELO DE INVERSIÓN (PRECIOS B2B) */
+    /* PRECIOS */
     .pricing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; max-width: 900px; margin: 0 auto; }
     .price-card { background: var(--bg-card); padding: 48px; border-radius: 12px; border: 1px solid var(--border-color); position: relative; }
     .price-card.featured { border-color: var(--primary); background: linear-gradient(180deg, rgba(0,102,255,0.05) 0%, var(--bg-card) 100%); }
@@ -130,56 +181,10 @@
     .whatsapp-btn { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); z-index: 1000; transition: 0.3s; }
     .whatsapp-btn:hover { transform: scale(1.1); }
 
-    /* FOOTER Y NUEVAS REDES SOCIALES */
+    /* FOOTER */
     footer { background: #070A11; padding: 60px 0 30px; text-align: center; border-top: 1px solid var(--border-color); }
     .social-links { display: flex; justify-content: center; gap: 20px; margin: 20px 0; }
-    .social-links a { color: var(--text-muted); font-size: 1.5rem; transition: 0.3s; }
-    .social-links a:hover { color: var(--primary); transform: translateY(-3px); }
-    
-    /* RESPONSIVE */
-    @media (max-width: 992px) {
-      .hero h1 { font-size: 3rem; }
-      .stats-grid, .process-grid, .pricing-grid, .testimonials-grid, .contact-wrapper { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="container nav-content">
-      <div class="logo">
-        <img src="VIS_,METRICS_LOGO.png" alt="Logo Vision Metrics" style="height: 180px; border-radius: 4px; margin-right: 5px;">
-        Vision Metrics
-      </div>
-      <nav class="nav-links">
-        <a href="#soluciones">Soluciones</a>
-        <a href="#proceso">Metodología</a>
-        <a href="#casos">Casos de Éxito</a>
-        <a href="#inversion">Inversión</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contacto" class="btn-nav">Evaluación Gratuita</a>
-      </nav>
-    </div>
-  </header>
-<section class="hero">
-    <div class="container hero-content reveal">
-      <div class="badge">VisionMetrics</div>
-      <h1>Transformamos tus Datos en <span>Decisiones Rentables</span></h1>
-      <p>Diseñamos ecosistemas de datos, automatizamos reportes corporativos y desarrollamos inteligencia de negocios para empresas que buscan reducir costos operativos y escalar con certidumbre.</p>
-      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-        <button class="btn-primary" onclick="document.getElementById('contacto').scrollIntoView()">
-          Solicitar Evaluación de Datos <i class="fas fa-arrow-right"></i>
-        </button>
-        
-        <!-- 👇 Botón actualizado con tu link directo a Google Drive 👇 -->
-        <button class="btn-primary" style="background: transparent; border: 1px solid var(--border-color);" onclick="window.open('https://drive.google.com/file/d/1SmZIGLXcwjzdTMdCC6gh5d-la22Oi3vN/view?usp=sharing', '_blank')">
-          <i class="fas fa-download"></i> Descargar Brochure
-        </button>
-        
-      </div>
-    </div>
-  </section>
+    .soc
 
 <section style="background: var(--bg-card); padding: 80px 0;">
   <div class="container reveal">
