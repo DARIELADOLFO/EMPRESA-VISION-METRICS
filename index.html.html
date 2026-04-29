@@ -157,6 +157,7 @@
         <a href="#proceso">Metodología</a>
         <a href="#casos">Casos de Éxito</a>
         <a href="#inversion">Inversión</a>
+        <a href="#faq">FAQ</a>
         <a href="#contacto" class="btn-nav">Evaluación Gratuita</a>
       </nav>
     </div>
@@ -675,7 +676,146 @@
       </div>
     </div>
   </section>
+<!-- ── FAQ SECTION ── -->
+<style>
+  .faq-item { border-bottom: 1px solid var(--border-color); }
+  .faq-question {
+    width: 100%; background: none; border: none; color: var(--text-main);
+    font-family: var(--font-main); font-size: 1.05rem; font-weight: 600;
+    text-align: left; padding: 24px 0; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    transition: color 0.2s;
+  }
+  .faq-question:hover { color: var(--primary); }
+  .faq-icon {
+    width: 28px; height: 28px; border-radius: 50%;
+    border: 1px solid var(--border-color); display: flex;
+    align-items: center; justify-content: center;
+    flex-shrink: 0; transition: all 0.3s; color: var(--text-muted); font-size: 1.1rem;
+  }
+  .faq-item.open .faq-icon { background: var(--primary); border-color: var(--primary); color: #fff; transform: rotate(45deg); }
+  .faq-answer {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    color: var(--text-muted); font-size: 1rem; line-height: 1.8;
+  }
+  .faq-item.open .faq-answer { max-height: 300px; padding-bottom: 24px; }
+  .faq-tag {
+    display: inline-block; background: rgba(0,102,255,0.1); color: var(--primary);
+    font-size: 0.75rem; font-weight: 600; padding: 4px 12px;
+    border-radius: 20px; border: 1px solid rgba(0,102,255,0.2); margin-bottom: 40px;
+  }
+</style>
 
+<section id="faq" style="background: var(--bg-dark); padding: 100px 0; border-bottom: 1px solid var(--border-color);">
+  <div class="container reveal">
+    <div class="section-header">
+      <h2>Preguntas Frecuentes</h2>
+      <p>Todo lo que necesitas saber antes de agendar tu diagnóstico gratuito.</p>
+    </div>
+
+    <div style="max-width: 800px; margin: 0 auto;">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Necesito tener un ERP o sistema avanzado para trabajar con ustedes?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          No es requisito. Trabajamos con empresas desde cero — incluso si toda tu información está en hojas de Excel. De hecho, una parte importante de nuestro trabajo inicial es organizar y estructurar esa data dispersa para convertirla en un modelo confiable. Si tienes ERP como SAP, Odoo u Oracle, simplemente aceleramos el proceso.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Cuánto tiempo tarda una implementación de Power BI?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Depende de la complejidad, pero en promedio un dashboard ejecutivo funcional tarda entre 2 y 4 semanas desde el diagnóstico hasta la entrega. Proyectos con múltiples fuentes de datos o integraciones con ERP pueden tomar entre 4 y 8 semanas. Siempre establecemos un cronograma claro desde el inicio.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Qué pasa si mis datos están desorganizados o incompletos?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Es la situación más común que encontramos. El 80% de nuestros clientes llegan con datos fragmentados, duplicados o sin estructura. Por eso nuestra Fase 2 se enfoca en limpieza, modelado y validación de datos antes de construir cualquier dashboard. Partimos de donde estás, no de donde quisieras estar.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Necesito saber usar Power BI para aprovechar los dashboards?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Para nada. Diseñamos los tableros pensando en directores y gerentes que necesitan tomar decisiones rápidas, no en analistas técnicos. La interfaz es intuitiva, visual y no requiere conocimientos previos. Además incluimos una sesión de capacitación al equipo como parte de cada implementación.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Los dashboards se actualizan automáticamente?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Sí. Configuramos actualizaciones automáticas conectadas directamente a tus fuentes de datos. Dependiendo de la fuente, la información puede refrescarse desde cada 15 minutos hasta una vez al día. Atrás queda el proceso manual de exportar reportes a Excel cada semana.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Cuánto cuesta una licencia de Power BI?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Power BI Pro cuesta aproximadamente $10 USD por usuario al mes, facturado por Microsoft directamente. Para compartir dashboards con toda tu empresa sin licencias individuales, existe Power BI Embedded, que evaluamos según el volumen de usuarios. Nuestro fee es independiente de las licencias de Microsoft.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Qué sucede si quiero cambios después de la entrega?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Para eso existe nuestro Retainer Estratégico (Fase 2). Por una mensualidad fija tienes acceso a mejoras continuas, nuevos requerimientos, soporte ante cualquier eventualidad y optimizaciones proactivas. Si el proyecto fue puntual y necesitas un cambio pequeño, lo cotizamos por separado sin compromiso.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Trabajan solo con empresas de República Dominicana?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          No. Tenemos clientes en República Dominicana, pero al ser un servicio 100% digital trabajamos con empresas en toda Latinoamérica. Las reuniones son virtuales, los accesos son remotos y los entregables se comparten en la nube. La ubicación no es una limitante.
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align: center; margin-top: 60px;">
+      <p style="color: var(--text-muted); margin-bottom: 20px;">¿Tienes otra pregunta que no está aquí?</p>
+      <button class="btn-primary" onclick="document.getElementById('contacto').scrollIntoView()">
+        Habla con un consultor <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+</script>
   <section id="contacto">
     <div class="container reveal">
       <div class="contact-wrapper">
