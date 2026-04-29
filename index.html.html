@@ -180,50 +180,53 @@
     </div>
   </section>
 
-  <section style="background: var(--bg-card); padding: 80px 0;">
-    <div class="container reveal">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
-        
-        <div>
-          <h3 style="color: var(--text-main); margin-bottom: 25px; font-size: 1.3rem; display: flex; align-items: center; gap: 10px;">
-            <i class="fas fa-chart-line" style="color: var(--primary);"></i> ANALÍTICA Y DECISIONES
-          </h3>
-          <div style="display: flex; flex-direction: column; gap: 15px;">
-            <!-- Busca esto -->
-<div class="stat-number" style="font-size: 2rem; margin: 0; min-width: 90px;">+50%</div>
-<!-- Cámbialo por -->
-<div class="stat-number" id="stat-dec1" style="font-size: 2rem; margin: 0; min-width: 90px;">+0%</div>
-
-<!-- Busca esto -->
-<div class="stat-number" style="font-size: 2rem; margin: 0; min-width: 90px;">-25%</div>
-<!-- Cámbialo por -->
-<div class="stat-number" id="stat-dec2" style="font-size: 2rem; margin: 0; min-width: 90px;">-0%</div>
-
-<!-- Busca esto -->
-<div class="stat-number" style="font-size: 2rem; margin: 0; min-width: 90px;">100%</div>
-<!-- Cámbialo por -->
-<div class="stat-number" id="stat-dec3" style="font-size: 2rem; margin: 0; min-width: 90px;">0%</div>
-            </div>
+<section style="background: var(--bg-card); padding: 80px 0;">
+  <div class="container reveal">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+      
+      <div>
+        <h3 style="color: var(--text-main); margin-bottom: 25px; font-size: 1.3rem; display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-chart-line" style="color: var(--primary);"></i> ANALÍTICA Y DECISIONES
+        </h3>
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+          <div class="stat-card" style="padding: 20px; display: flex; align-items: center; gap: 20px; text-align: left;">
+            <div class="stat-number" id="stat-dec1" style="font-size: 2rem; margin: 0; min-width: 90px;">+0%</div>
+            <div class="stat-desc">Velocidad de toma de decisiones</div>
+          </div>
+          <div class="stat-card" style="padding: 20px; display: flex; align-items: center; gap: 20px; text-align: left;">
+            <div class="stat-number" id="stat-dec2" style="font-size: 2rem; margin: 0; min-width: 90px;">-0%</div>
+            <div class="stat-desc">Tiempo invertido en análisis manual</div>
+          </div>
+          <div class="stat-card" style="padding: 20px; display: flex; align-items: center; gap: 20px; text-align: left;">
+            <div class="stat-number" id="stat-dec3" style="font-size: 2rem; margin: 0; min-width: 90px;">0%</div>
+            <div class="stat-desc">Visibilidad de KPIs en tiempo real</div>
           </div>
         </div>
-
-        <div>
-          <h3 style="color: var(--text-main); margin-bottom: 25px; font-size: 1.3rem; display: flex; align-items: center; gap: 10px;">
-            <i class="fas fa-box-open" style="color: var(--accent);"></i> OPERACIONES / LOGÍSTICA
-          </h3>
-          <div style="display: flex; flex-direction: column; gap: 15px;">
-<div class="stat-number" id="stat-log1" style="font-size: 2rem; margin: 0; min-width: 90px;">+0%</div>
-
-<div class="stat-number" id="stat-log2" style="font-size: 2rem; margin: 0; min-width: 90px;">-0%</div>
-
-<div class="stat-number" id="stat-log3" style="font-size: 2rem; margin: 0; min-width: 90px;">+0%</div>
-            </div>
-          </div>
-        </div>
-
       </div>
+
+      <div>
+        <h3 style="color: var(--text-main); margin-bottom: 25px; font-size: 1.3rem; display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-box-open" style="color: var(--accent);"></i> OPERACIONES / LOGÍSTICA
+        </h3>
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+          <div class="stat-card" style="padding: 20px; display: flex; align-items: center; gap: 20px; text-align: left;">
+            <div class="stat-number" id="stat-log1" style="font-size: 2rem; margin: 0; min-width: 90px;">+0%</div>
+            <div class="stat-desc">Mejora en rotación de inventario</div>
+          </div>
+          <div class="stat-card" style="padding: 20px; display: flex; align-items: center; gap: 20px; text-align: left;">
+            <div class="stat-number" id="stat-log2" style="font-size: 2rem; margin: 0; min-width: 90px;">-0%</div>
+            <div class="stat-desc">Tiempo de entrega</div>
+          </div>
+          <div class="stat-card" style="padding: 20px; display: flex; align-items: center; gap: 20px; text-align: left;">
+            <div class="stat-number" id="stat-log3" style="font-size: 2rem; margin: 0; min-width: 90px;">+0%</div>
+            <div class="stat-desc">Cumplimiento de pedidos</div>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
 <style>
     /* Contenedor principal que oculta lo que se sale de la pantalla */
