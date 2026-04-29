@@ -586,7 +586,7 @@
           </li>
         </ul>
         <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-color);">
-          <i class="fas fa-info-circle" style="margin-right: 6px;"></i>Puede superar RD$130,000+ según magnitud corporativa.
+          <i class="fas fa-info-circle" style="margin-right: 6px;"></i>Puede superar RD$100,000+ según magnitud corporativa.
         </p>
         <button class="btn-primary" style="width: 100%; margin-top: 20px; justify-content: center;" onclick="document.getElementById('contacto').scrollIntoView()">
           Cotizar Fase 1
@@ -607,7 +607,7 @@
           <p style="color: var(--text-muted); font-size: 0.85rem;">Soporte, evolución y administración</p>
         </div>
         <div style="text-align: center; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border-color);">
-          <div style="font-size: 1.8rem; font-weight: 800; color: var(--text-main);">RD$ 12,000 – 20,000</div>
+          <div style="font-size: 1.8rem; font-weight: 800; color: var(--text-main);">RD$ 8,000 – 15,000</div>
           <div style="color: var(--text-muted); font-size: 0.9rem;">/mes</div>
         </div>
         <ul style="display: flex; flex-direction: column; gap: 12px; flex-grow: 1;">
@@ -640,7 +640,7 @@
             <i class="fas fa-brain" style="color: var(--accent); font-size: 1.3rem;"></i>
           </div>
           <p style="color: var(--text-muted); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">Fase 3</p>
-          <h3 style="font-size: 1.2rem; margin-bottom: 4px;">IA, Predicción y Clasificación</h3>
+          <h3 style="font-size: 1.2rem; margin-bottom: 4px;">Modelos de Predicción y Clasificación</h3>
           <p style="color: var(--text-muted); font-size: 0.85rem;">Machine Learning y automatizaciones con Python</p>
         </div>
         <div style="text-align: center; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border-color);">
@@ -666,7 +666,7 @@
           </li>
         </ul>
         <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-color);">
-          <i class="fas fa-info-circle" style="margin-right: 6px;"></i>Requiere auditoría previa de datos. Puede superar RD$120,000 según alcance.
+          <i class="fas fa-info-circle" style="margin-right: 6px;"></i>Requiere auditoría previa de datos. Puede superar RD$130,000 según alcance.
         </p>
         <button class="btn-primary" style="width: 100%; margin-top: 20px; justify-content: center; background: transparent; border: 1px solid var(--primary); color: var(--primary);" onclick="document.getElementById('contacto').scrollIntoView()">
           Cotizar Fase 3
@@ -846,36 +846,60 @@
     if (!isOpen) item.classList.add('open');
   }
 </script>
-  <section id="contacto">
-    <div class="container reveal">
-      <div class="contact-wrapper">
-        <div class="contact-info">
-          <h3>Hablemos de tu Arquitectura de Datos</h3>
-          <p style="color: var(--text-muted); margin-bottom: 40px; font-size: 1.1rem;">Agenda una sesión estratégica gratuita de 30 minutos. Analizaremos tus sistemas actuales y te daremos una hoja de ruta clara.</p>
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i> estrategia@visionmetrics.com
-          </div>
-          <div class="contact-item">
-            <i class="fab fa-linkedin"></i> linkedin.com/company/vision-metrics
-          </div>
+ <section id="contacto">
+  <div class="container reveal">
+    <div class="contact-wrapper">
+
+      <div class="contact-info">
+        <h3>Hablemos de tu Arquitectura de Datos</h3>
+        <p style="color: var(--text-muted); margin-bottom: 40px; font-size: 1.1rem;">
+          Agenda una sesión estratégica gratuita de 30 minutos. Analizaremos tus sistemas actuales y te daremos una hoja de ruta clara.
+        </p>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i> estrategia@visionmetrics.com
         </div>
-        
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Mensaje enviado. Un consultor se comunicará pronto.');">
+        <div class="contact-item">
+          <i class="fab fa-linkedin"></i> linkedin.com/company/vision-metrics
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-whatsapp"></i> +1 (849) 534-4300
+        </div>
+      </div>
+
+      <div>
+        <!-- Mensaje de éxito (oculto por defecto) -->
+        <div id="form-success" style="display:none; background: rgba(0,208,132,0.1); border: 1px solid rgba(0,208,132,0.3); border-radius: 12px; padding: 40px; text-align: center;">
+          <i class="fas fa-check-circle" style="color: var(--accent); font-size: 3rem; margin-bottom: 16px; display: block;"></i>
+          <h3 style="margin-bottom: 12px;">¡Mensaje recibido!</h3>
+          <p style="color: var(--text-muted);">Un consultor de Vision Metrics se comunicará contigo en menos de 24 horas hábiles.</p>
+        </div>
+
+        <!-- Formulario -->
+        <form id="contact-form" action="https://formspree.io/f/XXXXXXXX" method="POST">
+
+          <!-- Campo oculto para identificar el origen -->
+          <input type="hidden" name="_subject" value="Nuevo lead — Vision Metrics Web">
+          <input type="hidden" name="_next" value="">
+
           <div class="form-group">
             <label>Nombre Completo</label>
-            <input type="text" required placeholder="Ej. Juan Pérez">
+            <input type="text" name="nombre" required placeholder="Ej. Juan Pérez">
           </div>
           <div class="form-group">
             <label>Empresa y Cargo</label>
-            <input type="text" required placeholder="Ej. Gerente de Logística en Empresa S.A.">
+            <input type="text" name="empresa_cargo" required placeholder="Ej. Gerente de Logística en Empresa S.A.">
           </div>
           <div class="form-group">
             <label>Correo Corporativo</label>
-            <input type="email" required placeholder="juan@empresa.com">
+            <input type="email" name="email" required placeholder="juan@empresa.com">
           </div>
           <div class="form-group">
-            <label>¿Qué sistema ERP/Base de datos utilizan?</label>
-            <select required>
+            <label>Teléfono / WhatsApp <span style="color: var(--text-muted); font-weight: 400;">(opcional)</span></label>
+            <input type="tel" name="telefono" placeholder="Ej. +1 809 000 0000">
+          </div>
+          <div class="form-group">
+            <label>¿Qué sistema ERP / Base de datos utilizan?</label>
+            <select name="erp" required>
               <option value="" disabled selected>Selecciona una opción</option>
               <option>SAP</option>
               <option>Oracle</option>
@@ -886,39 +910,21 @@
           </div>
           <div class="form-group">
             <label>Cuéntanos tu mayor desafío con los datos</label>
-            <textarea rows="4" required placeholder="Ej. Necesitamos unificar las ventas y el inventario en un solo lugar..."></textarea>
+            <textarea name="desafio" rows="4" required placeholder="Ej. Necesitamos unificar las ventas y el inventario en un solo lugar..."></textarea>
           </div>
-          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">Solicitar Consultoría</button>
+
+          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+            <span id="btn-text">Solicitar Consultoría</span>
+            <i class="fas fa-arrow-right" id="btn-icon"></i>
+            <i class="fas fa-spinner fa-spin" id="btn-spinner" style="display:none;"></i>
+          </button>
+
         </form>
       </div>
+
     </div>
-  </section>
-
-  <a href="http://wa.me/18495344300" target="_blank" class="whatsapp-btn">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <footer>
-    <div class="container">
-      <div class="logo" style="justify-content: center; margin-bottom: 10px;">
-        <img src="VIS_,METRICS_LOGO.png" alt="Logo Vision Metrics" style="height: 180px; border-radius: 4px; margin-right: 5px;">
-        Vision Metrics
-      </div>
-      
-      <div class="social-links">
-        <a href="https://www.instagram.com/vision_metrics/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.youtube.com/@VisionMetricsDPV" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        <a href="http://wa.me/18495344300" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.linkedin.com/in/darielpe%C3%B1av%C3%A1squez/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-
-      <p style="color: var(--text-muted); font-size: 0.9rem;">
-        &copy; 2025 Vision Metrics. Inteligencia de Negocios y Data Science. Todos los derechos reservados.<br>
-        Santo Domingo, República Dominicana.
-      </p>
-    </div>
-  </footer>
-
+  </div>
+</section>
 <script>
   // ── REVEAL AL SCROLL ──────────────────────────────────
   function reveal() {
